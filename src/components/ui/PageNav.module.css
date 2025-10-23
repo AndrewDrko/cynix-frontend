@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 2rem;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+
+  gap: 3.2rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: var(--color-primary-light);
+}

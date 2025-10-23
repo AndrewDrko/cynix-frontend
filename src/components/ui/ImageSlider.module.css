@@ -1,0 +1,39 @@
+.image {
+  position: relative;
+  aspect-ratio: 22 / 9;
+  width: 100%;
+  filter: brightness(0.3);
+}
+
+.slider {
+  width: 100%;
+  /* mask-image: linear-gradient(to bottom, black 90%, transparent 100%); */
+}
+
+.sliderInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sliderInfo h1 {
+  font-size: 4.8rem;
+}
+
+.sliderInfo blockquote {
+  font-size: 2rem;
+}
+
+.slider button {
+  margin-top: 4.2rem;
+  justify-self: center;
+  font-size: 2.6rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}

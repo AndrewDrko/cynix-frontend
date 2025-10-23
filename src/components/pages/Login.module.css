@@ -1,0 +1,40 @@
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--color-gray--3);
+
+  border: solid 1px var(--color-gray--7);
+  border-radius: 9px;
+  padding: 2rem 4rem;
+  color: var(--color-primary-dark);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 80%;
+
+  font-size: 2.4rem;
+}
+
+.loginSubmitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginAnchor {
+  text-align: end;
+  font-size: 1.5rem;
+}

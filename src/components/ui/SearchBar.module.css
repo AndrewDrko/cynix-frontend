@@ -1,0 +1,49 @@
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-light);
+  color: var(--color-gray--1);
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9px;
+
+  /* max-width: 40rem; */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputField {
+  display: inline-block;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  width: 100%;
+
+  letter-spacing: 1px;
+}
+
+.inputField::placeholder {
+  color: var(--color-gray--5);
+}
+.searchBarContainer:focus-within {
+  box-shadow: 0 0 0 2px var(--color-main--2);
+}
+
+.filterOptionsBtn svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.filterOptionsBtn {
+  padding: 0.4rem 0.8rem;
+}

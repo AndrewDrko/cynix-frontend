@@ -1,0 +1,18 @@
+.showtimesSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.836),
+      rgba(0, 0, 0, 0.884)
+    ),
+    url(/public/pattern.jpg);
+  background-repeat: repeat; /* repite tanto horizontal como verticalmente */
+  background-size: cover; /* o “contain” / “cover” / un tamaño definido si quieres controlar escala */
+}
+
+.showtimesSection h1 {
+  text-align: center;
+}

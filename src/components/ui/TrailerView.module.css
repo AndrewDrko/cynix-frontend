@@ -1,0 +1,12 @@
+.trailerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  overflow: visible;
+}
+
+.iframe {
+  margin-top: 2.4rem;
+  aspect-ratio: 16 / 9;
+}

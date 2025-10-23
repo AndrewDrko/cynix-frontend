@@ -1,0 +1,6 @@
+.movieItem {
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+  width: 70%;
+}
