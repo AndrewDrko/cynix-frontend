@@ -1,0 +1,39 @@
+.profileImage {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border-radius: 50%;
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  display: block;
+}
+
+.editBtn {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  background-color: var(--color-gray--2);
+  color: var(--color-primary);
+  width: 3rem;
+  height: 3rem;
+}
+
+.editBtn svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.editBtn:hover {
+  background-color: var(--color-gray--4);
+}

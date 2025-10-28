@@ -1,5 +1,6 @@
 import { LuUserRound } from "react-icons/lu";
 import Button from "./Button";
+import { forwardRef } from "react";
 
 function UserButton() {
   return (

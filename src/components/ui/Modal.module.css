@@ -1,14 +1,19 @@
 .modal {
+  /* background-color: var(--color-primary-light); */
+  background-color: var(--color-gray--9);
+
+  border-radius: 9px;
+  padding: 2.8rem 2rem;
+  border: 1px solid var(--color-gray--8);
+}
+
+.modalContainer {
   position: fixed;
   top: 50%;
   left: 50%;
-  background-color: var(--color-primary-light);
   transform: translate(-50%, -50%);
-  width: 50%;
-  border-radius: 9px;
-  padding: 2rem 1.8rem;
-
   z-index: 9999999;
+  width: 50%;
 }
 
 .overlay {

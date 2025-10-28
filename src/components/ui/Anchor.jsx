@@ -1,9 +1,13 @@
 import { NavLink } from "react-router";
 import styles from "./Anchor.module.css";
 
-function Anchor({ children, ref = "#", className = "" }) {
+function Anchor({ children, ref = "#", className = "", onClick }) {
   return (
-    <NavLink to={ref} className={`${styles.anchor} ${className}`}>
+    <NavLink
+      onClick={onClick}
+      to={ref}
+      className={`${styles.anchor} ${className}`}
+    >
       {children}
     </NavLink>
   );

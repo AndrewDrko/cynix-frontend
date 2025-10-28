@@ -5,7 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 
 import { useEffect, useState } from "react";
 import MovieItem from "../ui/MovieItem";
-import AnimatedList from "../ui/AnimatedList";
 
 const responsive = {
   superLargeDesktop: {
@@ -43,7 +42,7 @@ function ShowtimesSection() {
   return (
     <section className={styles.showtimesSection}>
       <h1>Cartelera</h1>
-      <CinemaSelectorButton type="secondary" />
+      <CinemaSelectorButton type="primary" />
 
       <h2>Todas las películas</h2>
       <Carousel

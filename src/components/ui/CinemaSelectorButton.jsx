@@ -7,6 +7,7 @@ import TheaterSelector from "./TheaterSelector";
 
 function CinemaSelectorButton({ type }) {
   const { openModal } = useModal();
+
   return (
     <Button
       type={type}

@@ -9,7 +9,6 @@ function ImageSlider({ image, name, description, trailer }) {
   const { openModal } = useModal();
   const newUrl = trailer.replace("watch?v=", "embed/");
 
-  console.log(newUrl);
   return (
     <div className={styles.slider}>
       <AnimatePresence mode="wait">
@@ -25,13 +24,22 @@ function ImageSlider({ image, name, description, trailer }) {
         />
       </AnimatePresence>
       <div className={styles.sliderInfo}>
-        <h1>{name}</h1>
-        <blockquote>{description}</blockquote>
+        <AnimatePresence mode="sync">
+          <motion.h1
+            key={name}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            {name}
+          </motion.h1>
+          <blockquote>{description}</blockquote>
+        </AnimatePresence>
         <div className={styles.buttonsContainer}>
-          <Button type="secondary">Comprar boletos</Button>
+          <Button type="primary">Comprar boletos</Button>
           <Button
-            type="primary"
-            onClick={() => openModal(<TrailerView url={newUrl} />)}
+            type="secondary"
+            onClick={() => openModal(<TrailerView url={newUrl} name={name} />)}
           >
             Mirar trailer
           </Button>

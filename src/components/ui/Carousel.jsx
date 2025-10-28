@@ -15,9 +15,9 @@ function Carousel() {
     async function getMovies() {
       try {
         // setIsLoading(true);
-        const res = await fetch(`${API_URL}/api/v1/movie`);
+        const res = await fetch(`${API_URL}/api/v1/movie/top-5-movies`);
         const data = await res.json();
-        setTopMovies(data.data.movies);
+        setTopMovies(data.data);
       } catch (error) {
         console.error(error);
       } finally {

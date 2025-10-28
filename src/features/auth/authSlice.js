@@ -22,7 +22,25 @@ export const loginUser = createAsyncThunk(
         credentials,
         { withCredentials: true }
       );
+
       return res.data; // { token, user }
+    } catch (err) {
+      return rejectWithValue(err.response.data); // manejar error
+    }
+  }
+);
+
+export const logoutUser = createAsyncThunk(
+  "auth/logoutUser", // nombre de la acción
+  async (_, { rejectWithValue }) => {
+    try {
+      // Llamada al backend
+      const res = await axios.post(
+        `${API_URL}/api/v1/user/logout`,
+        {},
+        { withCredentials: true }
+      );
+      return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data); // manejar error
     }
@@ -50,12 +68,21 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.user = action.payload;
+        state.user = action.payload.user;
         state.isAuthenticated = true;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload?.message || "Error al iniciar sesión";
+      })
+      // ... loginUser cases
+      .addCase(logoutUser.fulfilled, (state) => {
+        state.user = null;
+        state.isAuthenticated = false;
+        state.status = "idle";
+      })
+      .addCase(logoutUser.rejected, (state, action) => {
+        state.error = action.payload?.message || "Error al cerrar sesión";
       });
   },
 });

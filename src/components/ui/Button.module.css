@@ -5,13 +5,13 @@
 
   border: none;
   cursor: pointer;
-  padding: 1rem 1.4rem;
   font-size: 1.6rem;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s;
 }
 
 .square {
+  padding: 1rem 1.4rem;
   border-radius: 9px;
 }
 
@@ -22,27 +22,28 @@
   justify-content: center;
 }
 
-.primary {
+.secondary {
   background-color: var(--color-primary);
   color: var(--color-gray--1);
   font-weight: 600;
 }
 
-.primary:hover {
+.secondary:hover {
   background-color: var(--color-primary-light);
 }
 
-.secondary {
+.primary {
   background-color: var(--color-secondary);
   color: var(--color-gray--1);
   font-weight: 600;
 }
 
-.secondary:hover {
+.primary:hover {
   background-color: var(--color-secondary-light);
 }
 
 .button svg {
-  height: 2.4rem;
   width: 2.4rem;
+  height: 2.4rem;
+  object-fit: cover;
 }
