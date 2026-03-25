@@ -1,0 +1,9 @@
+.moviesLayout {
+  display: flex;
+  flex-direction: column;
+  /* gap: 3.2rem; */
+  align-items: center;
+
+  max-width: 190rem;
+  margin: 0 auto;
+}

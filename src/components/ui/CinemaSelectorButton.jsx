@@ -4,9 +4,15 @@ import Button from "./Button";
 import { MdArrowDropDown } from "react-icons/md";
 import { useModal } from "../../contexts/ModalContext.jsx";
 import TheaterSelector from "./TheaterSelector";
+import { usePreferences } from "../../features/preferences/usePreferences.js";
+import { useTheaters } from "../../features/theaters/useTheaters.js";
 
 function CinemaSelectorButton({ type }) {
+  const { selectedCinema } = usePreferences();
+  const { theaters } = useTheaters();
   const { openModal } = useModal();
+
+  const cinema = theaters.find((t) => t._id === selectedCinema);
 
   return (
     <Button
@@ -16,7 +22,8 @@ function CinemaSelectorButton({ type }) {
     >
       <div>
         <BiCameraMovie />
-        <span>Seleccionar Cine</span>
+        {!selectedCinema && <span>Todos los cines</span>}
+        {selectedCinema && cinema && <span>{cinema.name}</span>}
       </div>
       <MdArrowDropDown />
     </Button>

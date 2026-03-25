@@ -22,6 +22,16 @@
   justify-content: center;
 }
 
+.primary {
+  background-color: var(--color-secondary);
+  color: var(--color-gray--1);
+  font-weight: 600;
+}
+
+.primary:hover {
+  background-color: var(--color-secondary-light);
+}
+
 .secondary {
   background-color: var(--color-primary);
   color: var(--color-gray--1);
@@ -32,14 +42,13 @@
   background-color: var(--color-primary-light);
 }
 
-.primary {
-  background-color: var(--color-secondary);
-  color: var(--color-gray--1);
+.tertiary {
+  background-color: var(--color-accent-4);
   font-weight: 600;
 }
 
-.primary:hover {
-  background-color: var(--color-secondary-light);
+.tertiary:hover {
+  background-color: var(--color-accent-4-light);
 }
 
 .button svg {

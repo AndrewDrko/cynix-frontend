@@ -1,0 +1,23 @@
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-content: center;
+  width: 80%;
+
+  height: calc(80vh - 2rem);
+  gap: 3.2rem;
+}
+
+.layout .card {
+  background-color: var(--color-gray--3);
+  box-shadow: var(--shadow-standard);
+  border: solid 1px var(--color-gray--7);
+  border-radius: 9px;
+  padding: 2.4rem 3.2rem;
+  color: var(--color-primary-dark);
+}
+
+.userCard {
+  grid-row: 1 / -1;
+}

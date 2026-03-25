@@ -4,10 +4,15 @@ import styles from "./ImageSlider.module.css";
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from "framer-motion";
 import TrailerView from "./TrailerView";
+import { useNavigate } from "react-router";
 
-function ImageSlider({ image, name, description, trailer }) {
+function ImageSlider({ id, image, name, description, trailerUrl }) {
   const { openModal } = useModal();
-  const newUrl = trailer.replace("watch?v=", "embed/");
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movies/${id}/showtimes`);
+  };
 
   return (
     <div className={styles.slider}>
@@ -36,10 +41,16 @@ function ImageSlider({ image, name, description, trailer }) {
           <blockquote>{description}</blockquote>
         </AnimatePresence>
         <div className={styles.buttonsContainer}>
-          <Button type="primary">Comprar boletos</Button>
+          <Button type="primary" onClick={handleClick}>
+            Comprar boletos
+          </Button>
           <Button
             type="secondary"
-            onClick={() => openModal(<TrailerView url={newUrl} name={name} />)}
+            onClick={() =>
+              openModal(
+                <TrailerView url={trailerUrl} name={name} showTitle={true} />
+              )
+            }
           >
             Mirar trailer
           </Button>

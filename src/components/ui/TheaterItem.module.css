@@ -1,0 +1,37 @@
+/* THEATER ITEM */
+.theaterItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 9px;
+  padding: 0.5rem 0.8rem;
+
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--color-accent-2);
+}
+
+.theaterItem button {
+  background-color: inherit;
+}
+
+.theaterItem svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.theaterItem:hover {
+  background-color: var(--color-main--2);
+}
+
+.favoriteBtn {
+  border: none;
+  cursor: pointer;
+}
+
+.fullHeartSelected {
+  color: var(--color-accent-4);
+}

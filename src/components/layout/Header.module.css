@@ -14,6 +14,25 @@
   z-index: 999;
 }
 
+.dark {
+  background-color: var(--color-primary-dark);
+
+  border-bottom: 1px solid var(--color-gray--8);
+}
+
+.headerNavigation a:link,
+.headerNavigation a:visited {
+  color: var(--color-gray--4);
+}
+
+.headerNavigation a:hover {
+  color: var(--color-gray--1);
+}
+
+.headerNavigation img {
+  filter: invert();
+}
+
 .buttonContainer {
   display: flex;
   gap: 2rem;

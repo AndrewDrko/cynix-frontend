@@ -1,0 +1,27 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/2;
+  font-weight: 600;
+  justify-self: start;
+
+  background-color: var(--color-accent-2);
+  padding: 0.5rem 0.7rem;
+  border-radius: 9px;
+}
+
+.primary {
+  background-color: var(--color-accent-2);
+}
+
+.secondary {
+  user-select: none;
+  background-color: var(--color-gray--9);
+  border-radius: 25px;
+  padding: 0.8rem 1rem;
+}
+
+.secondary:hover {
+  background-color: var(--color-gray--8);
+}

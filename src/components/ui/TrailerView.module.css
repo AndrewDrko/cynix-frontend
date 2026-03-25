@@ -9,4 +9,5 @@
 .iframe {
   margin-top: 2.4rem;
   aspect-ratio: 16 / 9;
+  border-radius: 9px;
 }

@@ -1,0 +1,83 @@
+.ticketCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+  /* padding: 1.2rem 2.4rem; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 40%;
+
+  background-color: var(--color-gray--9);
+  border: 1px solid var(--color-primary-light);
+  border-radius: 18px;
+}
+
+.ticketCardContainer section {
+  padding: 1rem 1.8rem;
+}
+
+.ticketCardContainer h2 {
+  color: var(--color-main--3);
+  font-size: 2rem;
+}
+
+.ticketCardContainer h1 {
+  font-size: 2.4rem;
+}
+
+.ticketCardContainer p {
+  font-size: 1.6rem;
+}
+
+.ticketCardContainer span {
+  font-size: 1.4rem;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.movieHeader {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2rem;
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  height: 28rem;
+}
+
+.movieHeader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* controla la oscuridad aquí */
+  z-index: 1;
+}
+
+.movieHeader > * {
+  position: relative;
+  z-index: 2;
+}
+
+.movieHeader,
+.cinemaInfo,
+.orderInfo {
+  grid-column: 1 / -1;
+}
+
+.orderInfo {
+  text-align: center;
+}
+
+.orderInfo img {
+  /* width: 50%; */
+  align-self: center;
+}

@@ -9,6 +9,7 @@ const Button = forwardRef(
       onClick,
       type = "primary",
       shape = "square",
+      disabled,
       ...props
     },
     ref
@@ -18,6 +19,7 @@ const Button = forwardRef(
         ref={ref} // pasa el ref
         className={`${styles.button} ${styles[type]} ${styles[shape]} ${className}`}
         onClick={onClick}
+        disabled={disabled}
         {...props} // pasa props adicionales como eventos del Popover
       >
         {children}

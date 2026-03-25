@@ -58,7 +58,7 @@ function Carousel() {
       {topMovies && topMovies.length > 0 ? (
         <>
           <Button
-            type="secondary"
+            type="primary"
             shape="circle"
             className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
             onClick={handleSliderPrevious}
@@ -66,13 +66,14 @@ function Carousel() {
             <MdKeyboardArrowLeft />
           </Button>
           <ImageSlider
+            id={topMovies[currentIndex]._id}
             image={`${cachedImages[currentIndex].src}`}
             name={topMovies[currentIndex].title}
             description={topMovies[currentIndex].synopsis}
-            trailer={topMovies[currentIndex].trailerUrl}
+            trailerUrl={topMovies[currentIndex].trailerUrl}
           />
           <Button
-            type="secondary"
+            type="primary"
             shape="circle"
             className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
             onClick={handleSliderNext}

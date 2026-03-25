@@ -3,8 +3,9 @@ import CinemaSelectorButton from "../ui/CinemaSelectorButton";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { useEffect, useState } from "react";
 import MovieItem from "../ui/MovieItem";
+import { useMovies } from "../../contexts/MoviesContext";
+import Spinner from "../ui/Spinner";
 
 const responsive = {
   superLargeDesktop: {
@@ -28,16 +29,7 @@ const responsive = {
 const API_URL = import.meta.env.VITE_CYNIX_API_URL;
 
 function ShowtimesSection() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(function () {
-    async function getMovies() {
-      const res = await fetch(`${API_URL}/api/v1/movie`);
-      const data = await res.json();
-      setMovies(data.data.movies);
-    }
-    getMovies();
-  }, []);
+  const { allMovies: movies, isLoading } = useMovies();
 
   return (
     <section className={styles.showtimesSection}>
@@ -46,17 +38,28 @@ function ShowtimesSection() {
 
       <h2>Todas las películas</h2>
       <Carousel
-        style={{ userSelect: "none", backgroundColor: "#c71e1e3a" }}
+        style={{
+          userSelect: "none",
+          backgroundColor: "#c71e1e3a",
+          display: "flex",
+          justifyContent: "center",
+        }}
         responsive={responsive}
         draggable={true}
         swipeable={false}
       >
-        {!movies || movies.length === 0 ? (
+        {isLoading ? (
+          <Spinner />
+        ) : !movies || movies.length === 0 ? (
           <h2>No hay películas para mostrar :C</h2>
         ) : (
           movies.map((movie) => (
             <MovieItem
+              id={movie._id}
+              className={styles.movieItem}
               title={movie.title}
+              borderRounded={true}
+              showInfo={false}
               image={`${API_URL}${movie.posterUrl}`}
               key={movie.title}
             />

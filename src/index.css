@@ -59,8 +59,9 @@
 
   --color-accent-1: #007ea7; /* azul medio, armoniza con el principal */
   --color-accent-2: #00a896; /* verde azulado */
-  --color-accent-3: #f2c14e; /* amarillo suave para acentos */
-  --color-accent-4: #f25f5c; /* rojo coral para alertas secundarias */
+  --color-accent-3: #f3ca6c; /* amarillo suave para acentos */
+  --color-accent-4: #f54f4c;
+  --color-accent-4-light: #f25f5c; /* rojo coral para alertas secundarias */
 
   /* SHADOWS */
   --shadow-standard: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
@@ -78,11 +79,11 @@
 html {
   /* 10px/16px */
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-base);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -93,23 +94,9 @@ h2 {
   font-size: 2.4rem;
 }
 
-section {
+/* section {
   padding: 3.2rem 8rem;
-}
-
-.react-multi-carousel-list {
-  background-color: #0000005d;
-  padding: 2rem 2rem;
-  border-radius: 9px;
-}
-
-.react-multi-carousel-list button {
-  background-color: var(--color-primary);
-}
-
-.react-multi-carousel-list button:hover {
-  background-color: var(--color-primary-light);
-}
+} */
 
 input {
   font-size: inherit;
@@ -128,3 +115,38 @@ ul {
 a {
   text-decoration: none;
 }
+
+/* 3RD PARTY COMPONENTS */
+
+.react-multi-carousel-list {
+  background-color: #0000005d;
+  padding: 2rem 2rem;
+  border-radius: 9px;
+}
+
+.react-multi-carousel-list button {
+  background-color: var(--color-secondary);
+}
+
+.react-multi-carousel-list button:hover {
+  background-color: var(--color-secondary-light);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #707070;
+  color: #ccc;
+}
+
+button:disabled:hover {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #707070; /* o el color apagado que quieras */
+  color: #ccc;
+}
+
+/* .toast-container {
+  display: flex;
+  justify-content: center;
+} */

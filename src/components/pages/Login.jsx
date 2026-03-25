@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router";
+import Form from "../ui/Form";
+import AuthLayout from "../layout/AuthLayout";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,7 +19,7 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/"); // se ejecuta después del render
+      navigate("/");
     }
   }, [isAuthenticated, navigate]);
 
@@ -27,42 +29,31 @@ function Login() {
   }
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.loginCard}>
-        <Logo />
-        <h1>{isAuthenticated && "LOGEADO!"}</h1>
-        <h1>Inicia sesión en tu cuenta de Cynix</h1>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            required
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <Button className={styles.loginSubmitBtn}>Iniciar sesión</Button>
-          <Anchor className={styles.loginAnchor}>
-            ¿Olvidaste tu contraseña?
-          </Anchor>
-        </form>
-        {error && (
-          <p style={{ color: "red" }}>
-            No se ha podido iniciar sesión: {error}
-          </p>
-        )}
-        <p>
-          This site is protected by reCAPTCHA and the Google Privacy Policy and
-          Terms of Service apply.
-        </p>
-      </div>
-    </div>
+    <AuthLayout title={"Inicia Sesión en tu Cuenta de Cynix"}>
+      <Form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          required
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button className={styles.loginSubmitBtn}>Iniciar sesión</Button>
+        <Anchor className={styles.loginAnchor}>
+          ¿Olvidaste tu contraseña?
+        </Anchor>
+      </Form>
+      {error && (
+        <p style={{ color: "red" }}>No se ha podido iniciar sesión: {error}</p>
+      )}
+    </AuthLayout>
   );
 }
 

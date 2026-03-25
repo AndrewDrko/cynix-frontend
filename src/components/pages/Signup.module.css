@@ -1,0 +1,13 @@
+.signupSubmitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupAnchor {
+  text-align: end;
+  font-size: 1.5rem;
+
+  color: var(--color-accent-1);
+  display: inline-block;
+}

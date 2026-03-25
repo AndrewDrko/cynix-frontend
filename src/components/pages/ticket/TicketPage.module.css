@@ -1,0 +1,4 @@
+.ticketPage {
+  display: flex;
+  flex-direction: column;
+}

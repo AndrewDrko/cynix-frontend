@@ -37,3 +37,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.linkButton {
+  display: inline-block;
+  padding: 1rem 1.4rem;
+  border-radius: 9px;
+  font-size: 2.6rem;
+
+  background-color: var(--color-secondary);
+  color: var(--color-gray--1);
+  font-weight: 600;
+}

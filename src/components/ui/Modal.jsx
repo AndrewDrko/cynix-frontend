@@ -23,7 +23,7 @@ function Modal({ children }) {
           <div>{children}</div>
           <Button
             shape="circle"
-            type="secondary"
+            type="primary"
             onClick={closeModal}
             className={styles.modalCloseBtn}
           >
@@ -33,12 +33,9 @@ function Modal({ children }) {
       </div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8, y: 30 }}
-        transition={{
-          duration: 0.2,
-          scale: { type: "spring", visualDuration: 0.3, bounce: 0.3 },
-        }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
         className={styles.overlay}
         onClick={closeModal}
       ></motion.div>

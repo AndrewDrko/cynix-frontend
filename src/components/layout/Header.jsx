@@ -11,18 +11,18 @@ import Button from "../ui/Button";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { LuUserRound } from "react-icons/lu";
 
-function Header() {
+function Header({ darkMode = false }) {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
-    <header className={styles.header}>
-      <PageNav />
+    <header className={`${styles.header} ${darkMode ? styles.dark : ""}`}>
+      <PageNav className={darkMode ? styles.headerNavigation : ""} />
       <div className={styles.buttonContainer}>
         <CinemaSelectorButton type="secondary" />
-        <SearchBar placeholder="¿Que película buscas?" />
+        {/* <SearchBar placeholder="¿Que película buscas?" /> */}
 
         {isAuthenticated && (
-          <NavLink to="/me">
+          <NavLink to="/me" title="Usuario">
             <UserButton />
           </NavLink>
         )}
@@ -37,6 +37,7 @@ function Header() {
             >
               <LuUserRound />
             </PopoverButton>
+
             <PopoverPanel
               as="div"
               className={`flex flex-col ${styles.popoverPanel}`}

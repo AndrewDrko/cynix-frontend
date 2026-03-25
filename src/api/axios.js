@@ -7,7 +7,4 @@ const api = axios.create({
   withCredentials: true, // envía cookies automáticamente
 });
 
-// const res = await api.get("/api/v1/user/me");
-// console.log(res.data);
-
 export default api;

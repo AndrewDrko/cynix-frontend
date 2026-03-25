@@ -2,18 +2,19 @@ import { useState } from "react";
 import styles from "./TrailerView.module.css";
 import Spinner from "../ui/Spinner";
 
-function TrailerView({ url, name }) {
+function TrailerView({ url, name, showTitle = false, className = "" }) {
+  const newUrl = url.replace("watch?v=", "embed/");
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className={styles.trailerContainer}>
-      <h1>Trailer - {name}</h1>
+    <div className={`${styles.trailerContainer} ${className}`}>
+      {showTitle && <h1>Trailer - {name}</h1>}
 
       {loading && <Spinner />}
 
       <iframe
         className={styles.iframe}
-        src={url}
+        src={newUrl}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

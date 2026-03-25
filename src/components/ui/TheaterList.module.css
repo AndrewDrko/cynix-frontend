@@ -1,0 +1,15 @@
+/* THEATER LIST */
+.theaterList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-height: 50vh;
+
+  /* background-color: var(--color-gray--8); */
+  /* padding: 1.2rem 1.7rem; */
+  /* border-radius: 9px; */
+  /* border: 1px solid var(--color-gray--6); */
+
+  overflow-y: auto;
+}

@@ -1,0 +1,21 @@
+.authContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.authCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--color-gray--3);
+  box-shadow: var(--shadow-sm);
+
+  border: solid 1px var(--color-gray--7);
+  border-radius: 9px;
+  padding: 2rem 4rem;
+  color: var(--color-primary-dark);
+}
