@@ -1,4 +1,4 @@
-🎬 #CYNIX — Frontend#
+🎬 **CYNIX Frontend**
 
 Interfaz web de una aplicación de cine desarrollada con React.
 Permite a los usuarios explorar películas, autenticarse y gestionar contenido de forma dinámica.
