@@ -7,11 +7,12 @@ function MovieCard({
   genre,
   classification,
   duration,
+  className,
 }) {
   const API_URL = import.meta.env.VITE_CYNIX_API_URL;
 
   return (
-    <div className={styles.movieCard}>
+    <div className={`${styles.movieCard} ${className}`}>
       <img
         src={`${API_URL}${posterUrl}`}
         alt={title}

@@ -177,9 +177,6 @@ button:disabled:hover {
 /* BELOW 704px Smaller Tablets */
 /*********************************/
 @media (max-width: 44em) {
-  html {
-    font-size: 47%;
-  }
 }
 /**********************************/
 /* BELOW 544px Phones */

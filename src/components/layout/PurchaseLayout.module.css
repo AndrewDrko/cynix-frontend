@@ -6,3 +6,9 @@
   max-width: 120rem;
   padding: 3.2rem 2.4rem;
 }
+
+@media (max-width: 59em) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

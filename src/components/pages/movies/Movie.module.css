@@ -20,6 +20,7 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  border-bottom: 1px solid var(--color-gray--7);
 }
 
 .mainSection {
@@ -78,4 +79,22 @@
 .trailer {
   width: 100%;
   max-width: 110rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 59em) {
+  .poster {
+    display: none;
+  }
+
+  .primaryInfo {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 44em) {
+  .layout section {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
 }

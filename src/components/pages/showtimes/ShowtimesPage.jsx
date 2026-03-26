@@ -50,6 +50,7 @@ function ShowtimesPage() {
     <div className={styles.showtimesLayout}>
       {selectedMovie && (
         <MovieCard
+          className={styles.movieCardShowtime}
           title={selectedMovie.title}
           posterUrl={selectedMovie.posterUrl}
           synopsis={selectedMovie.synopsis}
