@@ -1,7 +1,7 @@
 🎬 **CYNIX Frontend**
 
 Interfaz web de una aplicación de cine desarrollada con React.
-Permite a los usuarios explorar películas, autenticarse y gestionar contenido de forma dinámica.
+Permite a los usuarios explorar películas, ver funciones, ver cines, simular comprar boletos de cine, registrarse y autenticarse.
 
 Tecnologías utilizadas:
 - React
