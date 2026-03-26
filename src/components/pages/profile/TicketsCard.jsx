@@ -3,8 +3,6 @@ import styles from "./TicketsCard.module.css";
 import TicketList from "../../ui/TicketList";
 
 function TicketsCard({ className, tickets }) {
-  console.log(tickets);
-
   return (
     <div className={`${styles.ticketCard} ${className}`}>
       <span className={styles.titleContainer}>
