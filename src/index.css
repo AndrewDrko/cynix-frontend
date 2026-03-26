@@ -146,7 +146,43 @@ button:disabled:hover {
   color: #ccc;
 }
 
-/* .toast-container {
-  display: flex;
-  justify-content: center;
-} */
+/* GLOBAL MEDIA QUERIES */
+
+/**********************************/
+/* BELOW 1344px Smaller Computers */
+/*********************************/
+@media (max-width: 84em) {
+}
+
+/**********************************/
+/* BELOW 1200px Landscape Tablets */
+/*********************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/**********************************/
+/* BELOW 944px Tablets */
+/*********************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/**********************************/
+/* BELOW 704px Smaller Tablets */
+/*********************************/
+@media (max-width: 44em) {
+  html {
+    font-size: 47%;
+  }
+}
+/**********************************/
+/* BELOW 544px Phones */
+/*********************************/
+@media (max-width: 34em) {
+}

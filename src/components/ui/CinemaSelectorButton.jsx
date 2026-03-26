@@ -22,8 +22,12 @@ function CinemaSelectorButton({ type }) {
     >
       <div>
         <BiCameraMovie />
-        {!selectedCinema && <span>Todos los cines</span>}
-        {selectedCinema && cinema && <span>{cinema.name}</span>}
+        {!selectedCinema && (
+          <span className={styles.cinemaText}>Todos los cines</span>
+        )}
+        {selectedCinema && cinema && (
+          <span className={styles.cinemaText}>{cinema.name}</span>
+        )}
       </div>
       <MdArrowDropDown />
     </Button>

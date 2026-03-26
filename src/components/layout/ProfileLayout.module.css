@@ -21,3 +21,15 @@
 .userCard {
   grid-row: 1 / -1;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 59em) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 90%;
+    gap: 2.4rem;
+    height: 100vh;
+    padding: 3.2rem 0;
+  }
+}

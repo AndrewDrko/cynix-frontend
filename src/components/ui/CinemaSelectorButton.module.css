@@ -1,7 +1,7 @@
 .cinemaSelectorBtn {
   display: flex;
   justify-content: space-between;
-  width: 25rem;
+  /* width: 25rem; */
 }
 
 .cinemaSelectorBtn div {
@@ -14,4 +14,16 @@
 
 .cinemaSelectorBtn svg {
   transform: translate(0, -1px);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 44em) {
+  .cinemaText {
+    display: none;
+    font-size: 1rem;
+  }
+
+  .cinemaSelectorBtn {
+    display: inline;
+  }
 }

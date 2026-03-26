@@ -15,6 +15,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  width: 70%;
+  max-width: 80rem;
 }
 
 .sliderInfo h1 {
@@ -22,7 +25,7 @@
 }
 
 .sliderInfo blockquote {
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 .slider button {
@@ -47,4 +50,22 @@
   background-color: var(--color-secondary);
   color: var(--color-gray--1);
   font-weight: 600;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 44em) {
+  .sliderInfo blockquote {
+    font-size: 1.8rem;
+  }
+  .buttonsContainer button {
+    font-size: 2rem;
+  }
+  .image {
+    aspect-ratio: 14 / 8;
+  }
+}
+@media (max-width: 34em) {
+  .image {
+    aspect-ratio: 13 / 9;
+  }
 }

@@ -22,7 +22,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
+    items: 2,
   },
 };
 
@@ -34,7 +34,7 @@ function ShowtimesSection() {
   return (
     <section className={styles.showtimesSection}>
       <h1>Cartelera</h1>
-      <CinemaSelectorButton type="primary" />
+      {/* <CinemaSelectorButton type="primary" /> */}
 
       <h2>Todas las películas</h2>
       <Carousel

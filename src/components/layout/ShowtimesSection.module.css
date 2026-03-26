@@ -4,11 +4,11 @@
   justify-content: center;
   gap: 2rem;
   padding: 3.2rem 8rem;
+  flex: 1;
+  justify-self: flex-start;
 
-  background-image: linear-gradient(
-      rgba(34, 34, 34, 0.836),
-      rgba(0, 0, 0, 0.884)
-    ),
+  background-image:
+    linear-gradient(rgba(34, 34, 34, 0.836), rgba(0, 0, 0, 0.884)),
     url(/public/pattern.jpg);
   background-repeat: repeat;
   background-size: cover;
@@ -19,5 +19,5 @@
 }
 
 .movieItem {
-  width: 80%;
+  width: 75%;
 }

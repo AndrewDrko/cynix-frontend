@@ -12,7 +12,7 @@ function MoviesGrid() {
   if (!movies || movies.length === 0) return <p>No hay películas.</p>;
 
   return (
-    <>
+    <div className={styles.movieLayout}>
       <h1 className={styles.header}>
         ¡Mira nuestra cartelera y descubre tu próxima película favorita!
       </h1>
@@ -31,7 +31,7 @@ function MoviesGrid() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
