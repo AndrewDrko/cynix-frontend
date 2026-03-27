@@ -3,6 +3,8 @@
 Interfaz web de una aplicación de cine desarrollada con React.
 Permite a los usuarios explorar películas, ver funciones, ver cines, simular comprar boletos de cine, registrarse y autenticarse.
 
+DEMO: https://cynix-frontend-lime.vercel.app/
+
 Tecnologías utilizadas:
 - React
 - Vite
