@@ -8,7 +8,7 @@ function FavoriteCinemasCard({ className }) {
   const { theaters } = useTheaters();
   const { favoriteCinemas } = usePreferences();
 
-  const favCinemaArr = theaters.filter((c) => favoriteCinemas.includes(c._id));
+  const favCinemaArr = theaters.filter((c) => favoriteCinemas?.includes(c._id));
 
   return (
     <div className={`${styles.favoriteCinemasCard} ${className}`}>

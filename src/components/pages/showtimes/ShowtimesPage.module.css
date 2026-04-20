@@ -20,4 +20,15 @@
   .showtimesLayout {
     grid-template-columns: 2fr 2.7fr;
   }
+
+  @media (max-width: 44em) {
+    .showtimesLayout {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .movieCardShowtime {
+      grid-row: 2 / -1;
+    }
+  }
 }

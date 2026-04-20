@@ -34,7 +34,6 @@ function ShowtimesSection() {
   return (
     <section className={styles.showtimesSection}>
       <h1>Cartelera</h1>
-      {/* <CinemaSelectorButton type="primary" /> */}
 
       <h2>Todas las películas</h2>
       <Carousel

@@ -12,7 +12,7 @@ function TheaterItem({ id, name, selectable = true, className }) {
     handleToggleFavorite,
   } = usePreferences();
   const isSelected = id === selectedCinema;
-  const isFavorite = favoriteCinemas.includes(id);
+  const isFavorite = favoriteCinemas?.includes(id);
 
   const [hover, setHover] = useState(false);
 

@@ -21,3 +21,9 @@
 .movieItem {
   width: 75%;
 }
+
+@media (max-width: 44em) {
+  .showtimesSection {
+    padding: 2rem 6rem;
+  }
+}

@@ -2,11 +2,14 @@
   position: relative;
   aspect-ratio: 22 / 9;
   width: 100%;
-  filter: brightness(0.3);
+  filter: brightness(0.35);
 }
 
 .slider {
+  display: flex;
   width: 100%;
+  align-items: center;
+
   /* mask-image: linear-gradient(to bottom, black 90%, transparent 100%); */
 }
 
@@ -61,11 +64,7 @@
     font-size: 2rem;
   }
   .image {
-    aspect-ratio: 14 / 8;
-  }
-}
-@media (max-width: 34em) {
-  .image {
-    aspect-ratio: 13 / 9;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
   }
 }
