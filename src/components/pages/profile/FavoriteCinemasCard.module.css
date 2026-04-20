@@ -7,8 +7,9 @@
 .favoriteCinemasCard {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   gap: 1rem;
-  justify-content: center;
+
   /* height: 100%; */
 }
 
