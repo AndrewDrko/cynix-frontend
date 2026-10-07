@@ -5,7 +5,11 @@ function SeatGrid({ seats, onSeatSelection, seatsSelected }) {
   let rowReminder = seats[0].row;
   let rowArray = [];
 
-  const seatsPerRow = seats.reduce((acc, seat, i) => {
+  const orderedSeats = seats.sort(
+    (a, b) => a.row.localeCompare(b.row) || a.seatNumber - b.seatNumber,
+  );
+
+  const seatsPerRow = orderedSeats.reduce((acc, seat, i) => {
     if (rowReminder === seat.row) {
       rowArray.push(seat);
     }
